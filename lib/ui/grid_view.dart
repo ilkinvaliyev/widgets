@@ -6,16 +6,47 @@ class GridViewLesson extends StatelessWidget{
     return GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         primary: false,
-        itemCount: 15,
+        itemCount: 6,
         itemBuilder: (BuildContext context,int index){
-          return Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Colors.blue[100 * ((index+1) % 9)],
-              gradient: LinearGradient(colors: [Colors.yellow, Colors.red], begin: Alignment.topCenter, end: Alignment.bottomCenter )
+          return GestureDetector(
+            child: Container(
+                alignment: Alignment.bottomCenter,
+                decoration: BoxDecoration(
+                  color: Colors.blue[100 * ((index+1) % 9)],
+                  gradient: LinearGradient(colors: [Colors.yellow, Colors.red], begin: Alignment.topCenter, end: Alignment.bottomCenter ),
+                  image: DecorationImage(
+                      image: NetworkImage("https://ilkinvaliyev.com/uploads/4TIZDojz373OdSYCyxzuCPorWgzUnXC9PXiveCYI.webp"),
+                      fit: BoxFit.contain,
+                      alignment: Alignment.topCenter
+                  ),
+                  borderRadius: new BorderRadius.only(
+                      topLeft: new Radius.circular(20.0),
+                      bottomRight: new Radius.circular(15.0)
+                  ),
+                  boxShadow: [
+                    new BoxShadow(
+                        color: Colors.yellow.shade900,
+                        offset: new Offset(5.0, 5.0),
+                        blurRadius: 20.0
+                    )
+                  ],
+                ),
+                margin: EdgeInsets.all(20),
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    "Hi Flutter :)",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                )
             ),
-            margin: EdgeInsets.all(20),
-            child: Text("Hi Flutter :)", textAlign: TextAlign.center,),
+
+            onTap: () => debugPrint("On Tap clicked : $index"),
+            onDoubleTap: () => debugPrint("On Double Tap clicked"),
+            onLongPress: () => debugPrint("On Long Tap clicked"),
+            onHorizontalDragStart : (e) => debugPrint("On Horizontal Drag Start -  $index. Propery: $e"),
+            onHorizontalDragEnd : (e) => debugPrint("On Horizontal Drag End -  $index. Propery: $e"),
           );
         }
     );
