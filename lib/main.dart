@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/ui/etkin_liste.dart';
-import 'package:widgets/ui/lists.dart';
+import 'package:widgets/ui/grid_view.dart';
 
 void main(){
   runApp(MaterialApp(
@@ -11,10 +10,9 @@ void main(){
     debugShowCheckedModeBanner: false,
     home: Scaffold(
       appBar: AppBar(
-        title: Text("Scrolling Lessons App Bar", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-
+        title: Text("Grid View Lessons App Bar", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
       ),
-      body: EtkinListe(),
+      body: GridViewLesson(),
     ),
   ));
 }
