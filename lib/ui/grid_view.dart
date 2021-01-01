@@ -24,6 +24,7 @@ class GridViewLesson extends StatelessWidget{
 
 
 /*
+
 GridView.extent(
       maxCrossAxisExtent: 100,
     //  reverse: true,  // tersine yazdirir. en sonuncu elemandan baslayir yazdirmaga
