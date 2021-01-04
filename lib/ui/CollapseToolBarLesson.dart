@@ -35,36 +35,36 @@ class CollapseToolBarLesson extends StatelessWidget {
         ),
 
         //bu griddeki elementler yanbayan gelir
-        SliverGrid(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), //burda iki elementin yanbayan gelmesini deyir
-          delegate: SliverChildBuilderDelegate(_dinamicElementCreateFunction,childCount: 6),
-        //  delegate: SliverChildListDelegate(sabitListeElemanlari()),
-        ),
-
-        SliverGrid(
-            delegate: SliverChildBuilderDelegate(_dinamicElementCreateFunction,childCount: 8),
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 100) // burda ise 100px genisliyinde olmasini deyir
-        ),
-
-        SliverPadding(
-          padding: EdgeInsets.all(6),
-          sliver: SliverList(
-            delegate: SliverChildBuilderDelegate(
-              _dinamicElementCreateFunction, childCount: 6),
-          ),
-        ),
-        SliverFixedExtentList(
-            delegate: SliverChildListDelegate(
-              sabitListeElemanlari()
-            ), 
-            itemExtent: 250
-        ),
-        SliverFixedExtentList(
-            delegate: SliverChildBuilderDelegate(
-              _dinamicElementCreateFunction,childCount: 12
-            ),
-            itemExtent: 50
-        )
+        // SliverGrid(
+        //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), //burda iki elementin yanbayan gelmesini deyir
+        //   delegate: SliverChildBuilderDelegate(_dinamicElementCreateFunction,childCount: 6),
+        // //  delegate: SliverChildListDelegate(sabitListeElemanlari()),
+        // ),
+        //
+        // SliverGrid(
+        //     delegate: SliverChildBuilderDelegate(_dinamicElementCreateFunction,childCount: 8),
+        //     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 100) // burda ise 100px genisliyinde olmasini deyir
+        // ),
+        //
+        // SliverPadding(
+        //   padding: EdgeInsets.all(6),
+        //   sliver: SliverList(
+        //     delegate: SliverChildBuilderDelegate(
+        //       _dinamicElementCreateFunction, childCount: 6),
+        //   ),
+        // ),
+        // SliverFixedExtentList(
+        //     delegate: SliverChildListDelegate(
+        //       sabitListeElemanlari()
+        //     ),
+        //     itemExtent: 250
+        // ),
+        // SliverFixedExtentList(
+        //     delegate: SliverChildBuilderDelegate(
+        //       _dinamicElementCreateFunction,childCount: 12
+        //     ),
+        //     itemExtent: 50
+        // )
       ],
     );
   }

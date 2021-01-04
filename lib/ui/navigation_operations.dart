@@ -81,7 +81,7 @@ class NavigationOperations extends StatelessWidget {
                   ),
                   RaisedButton(
                     onPressed: (){
-                      Navigator.pushNamed(context, '/formIsleri');
+                      Navigator.pushNamed(context, '/inputIslemleri');
                     },
                     color: Colors.teal.shade700,
                     child: Text("Go to Form Page", style: TextStyle(color: Colors.white)),

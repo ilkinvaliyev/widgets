@@ -62,6 +62,7 @@ class _FormIsleriState extends State<FormIsleri> {
                child: FloatingActionButton(
                 onPressed: (){
                 },
+                 heroTag: 'btn1',
                 child: Icon(
                     Icons.house_rounded,
                   size: 16
@@ -76,6 +77,7 @@ class _FormIsleriState extends State<FormIsleri> {
               onPressed: (){
                 FocusScope.of(context).requestFocus(_fNode);
               },
+              heroTag: 'btn2',
               child: Icon(
                   Icons.edit
               ),
@@ -89,6 +91,7 @@ class _FormIsleriState extends State<FormIsleri> {
                 textController1.text = "Floatingden geldi";
                 FocusScope.of(context).requestFocus(_fNode);
               },
+              heroTag: 'btn3',
               child: Icon(
                   Icons.done_outline_sharp
               ),
